@@ -1,11 +1,11 @@
+print("The program may take about a minute to run. Please wait! The Web Map will open automatically once the program has run.")
+
 import folium
-import pandas
 import urllib.request
 from urllib.request import Request, urlopen
 import json
 import webbrowser
 
-print("The program may take about a minute to run. Please wait! The Web Map will open automatically once the program has run.")
 
 quake_url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
 qresponse = urlopen(quake_url)
@@ -15,6 +15,7 @@ m = folium.Map(titles="Stamen Terrain")
 
 # <------------------------------------------------------>
 #Adding Earthquakes in this block
+print("parsing Earthquake data...")
 fgq = folium.FeatureGroup(name="Earthquakes")
 for i in quake_data_json['features']:
     quake_lat = i["geometry"]["coordinates"][1]
@@ -30,6 +31,7 @@ for i in quake_data_json['features']:
 
 # <------------------------------------------------------>
 #Adding other natural hazards in this block
+print("Parsing data on other disasters...")
 
 disasters_url = Request("https://eonet.gsfc.nasa.gov/api/v3/events",
  headers={'User-Agent': 'Mozilla/5.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'})
@@ -82,6 +84,7 @@ for i in disaster_data_json['events'][:150]:
         icon = folium.Icon(color=marker_color(dis_type)))) 
 
 # <------------------------------------------------------->
+print("Wrapping up...")
 
 m.add_child(fgq)
 m.add_child(fgd)
