@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Earthquake Data Visualization{% endblock %}
+
+{% block content %}
+    <h1>Earthquake Magnitude Distribution</h1>
+    <img src="data:image/png;base64,{{ earthquake_chart_data }}" alt="Earthquake Distribution Chart">
+
+    {% for disaster_type, plot_data in disaster_plots.items() %}
+        <h1>{{ disaster_type }} Magnitude Distribution</h1>
+        <img src="data:image/png;base64,{{ plot_data }}" alt="{{ disaster_type }} Magnitude Distribution">
+    {% endfor %}
+{% endblock %}
