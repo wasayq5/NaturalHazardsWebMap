@@ -52,11 +52,11 @@ def fetch_disaster_data():
     disaster_data_json = json.loads(dresponse.read())
     return disaster_data_json
 
-def create_map():
+def create_map(quake_data_json, disaster_data_json):
     m = folium.Map(location=[0, 0], zoom_start=2)
 
-    quake_data_json = fetch_earthquake_data()
-    disaster_data_json = fetch_disaster_data()
+    # quake_data_json = fetch_earthquake_data()
+    # disaster_data_json = fetch_disaster_data()
 
     #Adding Earthquakes in this block
     print("parsing Earthquake data...")
@@ -200,7 +200,7 @@ for type_of_disaster in disaster_types:
 
 @app.route('/')
 def index():
-    map = create_map()
+    map = create_map(fetch_earthquake_data(), fetch_disaster_data())
     return render_template('map.html', map=map._repr_html_())
 
 @app.route('/visualize')
