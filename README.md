@@ -14,8 +14,11 @@ This web map provides information on various types of natural disasters worldwid
 - HTML
 - CSS
 - JavaScript
-- [Leaflet](https://leafletjs.com/): An open-source JavaScript library for mobile-friendly interactive maps.
 - [Deta](https://www.deta.sh/): Deta provides a simple backend infrastructure to host the application.
+- Folium
+- matplotlib
+- numpy
+- Flask
 
 ## Installation
 
