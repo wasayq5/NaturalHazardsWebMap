@@ -1,6 +1,6 @@
 # Natural Disasters Web Map
 
-This web map provides information on various types of natural disasters worldwide, built using various python libraries. You can access it [here](https://disasters_map-1-e0855033.deta.app/).
+This web map provides a map with information on various types of natural disasters worldwide, built using various python libraries. It has been deployed and can be accessed [here](https://disasters_map-1-e0855033.deta.app/).
 
 ## Features
 
