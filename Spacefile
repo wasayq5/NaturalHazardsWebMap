@@ -5,6 +5,12 @@ micros:
     src: ./
     engine: python3.9
     primary: true
+    dev: .venv/Scripts/flask --app main run --port 4201
     public_routes:
       - "/*"
-
+    actions:
+      - id: "refresh_data"
+        name: "Refresh Data"
+        description: "Fetches and stores the latest data from the earthquake and disaster APIs every 5 minutes."
+        trigger: "schedule"
+        default_interval: "*/5 * * * *"  # Cron expression for every 5 minutes

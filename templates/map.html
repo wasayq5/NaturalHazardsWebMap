@@ -3,5 +3,24 @@
 {% block title %}Natural Disasters Map!{% endblock %}
 
 {% block content %}
-    <div id="map">{{ map|safe }}</div>
+    <div id="map-container">
+        <div id="map">{{ map|safe }}</div>
+    </div>
+
+    <style>
+        /* Map Container */
+        #map-container {
+            display: flex;
+            justify-content: center; /* Centers the map horizontally */
+            margin: 20px auto;
+        }
+
+        #map {
+            width: 75%; /* Map spans 75% of the container width */
+            height: 600px; /* You can adjust the height as needed */
+            background-color: #2c2c3e; /* Add a background color if needed */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 {% endblock %}
