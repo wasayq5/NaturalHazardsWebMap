@@ -1,6 +1,9 @@
 # Natural Disasters Web Map
 
+NOTE: Deta Space, on which the application is being hosted, is shutting down on Ocotber 17th, 2024. Past this date, the link to this app will not be accessible; I will host the application elsewhere and update links accordingly in the readme when possible.
+
 This web map provides a map with information on various types of natural disasters worldwide, built using various python libraries. It has been deployed and can be accessed [here](https://disasters_map-1-e0855033.deta.app/).
+
 
 ## Features
 
