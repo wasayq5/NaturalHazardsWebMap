@@ -27,5 +27,4 @@ This web map provides a map with information on various types of natural disaste
 
 ## Installation
 
-There's no need for any installation to access the live application. Simply visit the provided link to access the web map.
-You can access the live application here: [Natural Disasters Web Map](https://disasters_map-1-e0855033.deta.app/)
+There's no need for any installation to access the live application. You can access the application here: [Natural Disasters Web Map](https://disasters_map-1-e0855033.deta.app/)
